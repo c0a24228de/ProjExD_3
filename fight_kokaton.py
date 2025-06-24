@@ -155,7 +155,10 @@ class Score:
         self.img = self.fonto.render(f"スコア: {self.score}", 0, self.color)
         self.rct = self.img.get_rect()
         self.rct.bottomleft = (100, HEIGHT - 50)
-
+        """
+        color:青色
+        fonto:hgp創英角ﾎﾟｯﾌﾟ体
+        """
     def update(self, screen: pg.Surface):
         self.img = self.fonto.render("Score: " + str(self.score), True, self.color)
         screen.blit(self.img, self.rct)
