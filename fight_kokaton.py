@@ -151,7 +151,8 @@ class Score:
         self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
         self.color = (0, 0, 255)
         self.score = 0
-        self.img = self.fonto.render("表示させる文字列", 0, self.color)
+        # self.img = self.fonto.render("表示させる文字列", 0, self.color) #L155に修正した物
+        self.img = self.fonto.render(f"スコア: {self.score}", 0, self.color)
         self.rct = self.img.get_rect()
         self.rct.bottomleft = (100, HEIGHT - 50)
 
